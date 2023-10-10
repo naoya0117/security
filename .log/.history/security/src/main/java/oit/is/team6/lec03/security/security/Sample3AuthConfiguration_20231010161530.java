@@ -23,8 +23,11 @@ public class Sample3AuthConfiguration {
   
   @Bean
   public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
-
+<<<<<<< HEAD
+    http.formLogin( login -> login
+=======
     http.formLogin(login -> login
+>>>>>>> 21062d3d14cf4e30a1c7958d19954332b1b3990f
         .permitAll())
         .logout(logout -> logout
             .logoutUrl("/logout")
@@ -34,10 +37,11 @@ public class Sample3AuthConfiguration {
             .requestMatchers(AntPathRequestMatcher.antMatcher("/**")).permitAll());
     return http.build();
   }
-
+<<<<<<< HEAD
+=======
 
   @Bean
-
+>>>>>>> 21062d3d14cf4e30a1c7958d19954332b1b3990f
   public InMemoryUserDetailsManager userDetailsService() {
 
     // ユーザ名，パスワード，ロールを指定してbuildする
